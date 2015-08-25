@@ -19,7 +19,7 @@ def data_from_screen(path):
 
     text = pytesseract.image_to_string(im1)
     text = text.translate(None, '!@#$%^&*()_+=[]{}|\\\'/;:"<>?')
-    split = [s for s in text.splitlines() if s]
+    split = [s.rstrip() for s in text.splitlines() if s]
     for i in xrange(len(split)):
         print split[i]
         if split[i][-5:].isdigit() and not split[i].isdigit():
