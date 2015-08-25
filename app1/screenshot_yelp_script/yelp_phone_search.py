@@ -1,4 +1,5 @@
 import rauth
+from local_settings import consumer_key, consumer_secret, token, token_secret
  
 def main(phone):
     params = get_search_parameters(phone)
@@ -7,8 +8,7 @@ def main(phone):
  
 def get_results(params, is_phone=True):
 
-    # API Keys here
-    
+    # API Keys in local settings
 
     session = rauth.OAuth1Session(
         consumer_key = consumer_key
