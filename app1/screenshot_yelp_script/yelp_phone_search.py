@@ -42,7 +42,7 @@ def search_alt(data):
 def get_search_parameters_alt(data):
     # See the Yelp API for more details, as above
     params = {}
-    params["term"] = data["name"] + " " + data["categories"]
+    params["term"] = data["categories"]
     params["location"] = data["address"]
     params["radius_filter"] = "500"
     params["limit"] = "1"
