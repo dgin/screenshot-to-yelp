@@ -1,0 +1,65 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Screenshot-to-Yelp</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel = "stylesheet" type="text/css" href = "static/bootstrap/css/bootstrap-theme.css"
+
+        <!-- Custom styles for this template -->
+        <link href="static/bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="jumbotron">
+            <h1 style="color:royalblue;">Screenshot-to-Yelp</h1>
+            <p class="lead">Upload a screenshot from Yelp's app or mobile site.<br> Be redirected straight to that page!</p>
+            <div style="text-align:center;">
+                <form method="POST" action='.' style="text-align:center;display:inline-block;" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type='submit' value="Upload a photo" class="btn btn-lg btn-success">
+                </form>
+                {% if text %}
+                    <p>Your last image was at {{text}}.</p>
+                {% endif %}
+            </div>
+
+        </div>
+
+        <div class="row marketing" style="text-align:center;">
+            <div class="col-lg-4" style="display:inline-block;">
+                <h4>"Dinner?"</h4>
+                <p>When a friend texts you a screenshot with just one word attached, you can check out its yelp, certain that you both are on the same page.</p>
+                <p><b>A screenshot like so:</b></p>
+
+            </div>
+
+            <div class="col=lg-8" style="display:inline-block;">
+
+                <img src="/static/img/example.PNG">
+
+            </div>
+
+      <footer class="footer">
+          <p>&copy; Daniel Gin 2015</p>
+      </footer>
+
+      </div>
+    </body>
+</html>
