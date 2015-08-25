@@ -17,6 +17,8 @@
         <!-- Custom styles for this template -->
         <link href="static/bootstrap/css/jumbotron-narrow.css" rel="stylesheet">
 
+        <link href="static/css/style.css" rel="stylesheet">
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -28,7 +30,7 @@
 
         <div class="jumbotron">
             <h1 style="color:royalblue;">Screenshot-to-Yelp</h1>
-            <p class="lead">Upload a screenshot from Yelp's app or mobile site.<br> Be redirected straight to that page!</p>
+            <p class="lead">Upload a screenshot of Yelp's app or mobile site.<br> Be redirected straight to that page!</p>
             <div style="text-align:center;">
                 <form method="POST" action='.' style="text-align:center;display:inline-block;" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -43,15 +45,10 @@
         </div>
 
         <div class="row marketing" style="text-align:center;">
-            <div class="col-lg-4" style="display:inline-block;">
+            <div class="col-lg-12" style="display:inline-block;">
                 <h4>"Dinner?"</h4>
-                <p>When a friend texts you a screenshot with just one word attached, you can check out its yelp, certain that you both are on the same page.</p>
+                <p>When a friend texts you a screenshot with just one word attached, you can check out its yelp, <br>certain that you both are on the same page.</p>
                 <p><b>A screenshot like so:</b></p>
-
-            </div>
-
-            <div class="col=lg-8" style="display:inline-block;">
-
                 <img src="/static/img/example.PNG">
 
             </div>

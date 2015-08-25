@@ -1,0 +1,10 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.jumbotron {
+    margin: -4.5rem -9999rem;
+    /* add back negative margin value */
+    padding: 4.75rem 9999rem;
+    background-color: #eee;
+}
